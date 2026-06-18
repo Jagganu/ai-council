@@ -1,0 +1,17 @@
+council:
+  name: "AI Council - Mock Test"
+
+storage:
+  mode: file
+  path: .council-mock/sessions
+
+agents:
+  count: 4
+  defaultLLM:
+    provider: mock
+    model: mock
+    temperature: 0.7
+    maxTokens: 2000
+
+credentials:
+  anthropicApiKey: mock-key

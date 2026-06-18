@@ -1,0 +1,457 @@
+{
+  "sessionId": "session-1781801079713",
+  "agents": [],
+  "currentPhase": "implementation",
+  "decisions": [
+    {
+      "id": "af86bcf9-e4d3-4948-8b7a-314a185026bf",
+      "phase": "planning",
+      "category": "routine",
+      "title": "planning Decision",
+      "description": "Plan the following task:\n\nAdd dark mode toggle",
+      "proposal": "Plan the following task:\n\nAdd dark mode toggle",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:39.723Z",
+      "updatedAt": "2026-06-18T16:44:39.723Z",
+      "finalApproved": true
+    },
+    {
+      "id": "3695d4d7-45f8-4e4b-be52-700963c33ba1",
+      "phase": "architecture",
+      "category": "architecture",
+      "title": "architecture Decision",
+      "description": "Design the architecture for:\n\nPlan the following task:\n\nAdd dark mode toggle",
+      "proposal": "Design the architecture for:\n\nPlan the following task:\n\nAdd dark mode toggle",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:39.726Z",
+      "updatedAt": "2026-06-18T16:44:39.726Z",
+      "finalApproved": true
+    },
+    {
+      "id": "56ece941-6c1f-4af4-8cdb-81f52cde717c",
+      "phase": "implementation",
+      "category": "routine",
+      "title": "implementation Decision",
+      "description": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd dar",
+      "proposal": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd dark mode toggle",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:39.727Z",
+      "updatedAt": "2026-06-18T16:44:39.727Z",
+      "finalApproved": true
+    }
+  ],
+  "completedRounds": 3,
+  "deadlocks": [],
+  "consensusResults": [
+    {
+      "decisionId": "decision-1781801079726",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801079726",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.726Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801079726",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.726Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801079726",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.726Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801079726",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.726Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-performance-1"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801079727",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-scalability-2"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801079727",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801079727",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:39.727Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-performance-1"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    }
+  ],
+  "sessionLog": [
+    {
+      "timestamp": "2026-06-18T16:44:39.719Z",
+      "eventType": "SESSION_STARTED",
+      "data": {
+        "sessionId": "session-1781801079713",
+        "task": "Add dark mode toggle",
+        "agentCount": 4
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.721Z",
+      "eventType": "TASK_RECEIVED",
+      "data": {
+        "task": "Add dark mode toggle"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.722Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.723Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "architecture"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.726Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "implementation"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:39.727Z",
+      "eventType": "TASK_COMPLETED",
+      "data": {
+        "phases": 3,
+        "decisionsCount": 3
+      }
+    }
+  ],
+  "currentDecision": {
+    "id": "56ece941-6c1f-4af4-8cdb-81f52cde717c",
+    "phase": "implementation",
+    "category": "routine",
+    "title": "implementation Decision",
+    "description": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd dar",
+    "proposal": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd dark mode toggle",
+    "round": 1,
+    "createdAt": "2026-06-18T16:44:39.727Z",
+    "updatedAt": "2026-06-18T16:44:39.727Z",
+    "finalApproved": true
+  }
+}

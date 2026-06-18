@@ -1,0 +1,455 @@
+{
+  "sessionId": "session-1781801087138",
+  "agents": [],
+  "currentPhase": "implementation",
+  "decisions": [
+    {
+      "id": "ed84e38e-240b-4a9c-b8a8-5b6c6ef91fbe",
+      "phase": "planning",
+      "category": "routine",
+      "title": "planning Decision",
+      "description": "Plan the following task:\n\nImplement OAuth2 with PKCE flow for all providers",
+      "proposal": "Plan the following task:\n\nImplement OAuth2 with PKCE flow for all providers",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:47.145Z",
+      "updatedAt": "2026-06-18T16:44:47.145Z",
+      "finalApproved": true
+    },
+    {
+      "id": "5aaa07b3-319a-4838-a486-9fdd41666b3d",
+      "phase": "architecture",
+      "category": "architecture",
+      "title": "architecture Decision",
+      "description": "Design the architecture for:\n\nPlan the following task:\n\nImplement OAuth2 with PKCE flow for all prov",
+      "proposal": "Design the architecture for:\n\nPlan the following task:\n\nImplement OAuth2 with PKCE flow for all providers",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:47.148Z",
+      "updatedAt": "2026-06-18T16:44:47.148Z",
+      "finalApproved": true
+    },
+    {
+      "id": "34a7ba55-fb6a-464c-ae42-f2a68b53c6e1",
+      "phase": "implementation",
+      "category": "routine",
+      "title": "implementation Decision",
+      "description": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nImpleme",
+      "proposal": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nImplement OAuth2 with PKCE flow for all providers",
+      "round": 1,
+      "createdAt": "2026-06-18T16:44:47.149Z",
+      "updatedAt": "2026-06-18T16:44:47.149Z",
+      "finalApproved": true
+    }
+  ],
+  "completedRounds": 3,
+  "deadlocks": [],
+  "consensusResults": [
+    {
+      "decisionId": "decision-1781801087148",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801087147",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.147Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801087147",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.147Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801087147",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.147Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801087147",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.147Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-security-0"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801087148",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801087148",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.148Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801087148",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.148Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801087148",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.148Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801087148",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.148Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [],
+      "abstainedAgents": [],
+      "weightedScore": 1,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801087149",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801087149",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.149Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801087149",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.149Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801087149",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.149Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801087149",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:44:47.149Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [],
+      "abstainedAgents": [],
+      "weightedScore": 1,
+      "round": 1,
+      "finalProposal": ""
+    }
+  ],
+  "sessionLog": [
+    {
+      "timestamp": "2026-06-18T16:44:47.142Z",
+      "eventType": "SESSION_STARTED",
+      "data": {
+        "sessionId": "session-1781801087138",
+        "task": "Implement OAuth2 with PKCE flow for all providers",
+        "agentCount": 4
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.144Z",
+      "eventType": "TASK_RECEIVED",
+      "data": {
+        "task": "Implement OAuth2 with PKCE flow for all providers"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.144Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.145Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "architecture"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.148Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "score": 1
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "implementation"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "score": 1
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:44:47.149Z",
+      "eventType": "TASK_COMPLETED",
+      "data": {
+        "phases": 3,
+        "decisionsCount": 3
+      }
+    }
+  ],
+  "currentDecision": {
+    "id": "34a7ba55-fb6a-464c-ae42-f2a68b53c6e1",
+    "phase": "implementation",
+    "category": "routine",
+    "title": "implementation Decision",
+    "description": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nImpleme",
+    "proposal": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nImplement OAuth2 with PKCE flow for all providers",
+    "round": 1,
+    "createdAt": "2026-06-18T16:44:47.149Z",
+    "updatedAt": "2026-06-18T16:44:47.149Z",
+    "finalApproved": true
+  }
+}

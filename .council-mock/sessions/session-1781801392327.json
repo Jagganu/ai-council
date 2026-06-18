@@ -1,0 +1,825 @@
+{
+  "sessionId": "session-1781801392327",
+  "agents": [],
+  "currentPhase": "testing",
+  "decisions": [
+    {
+      "id": "61de25ab-b9af-4497-b3eb-7cd627701d92",
+      "phase": "planning",
+      "category": "routine",
+      "title": "planning Decision",
+      "description": "Plan the following task:\n\nAdd rate limiting",
+      "proposal": "Plan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements",
+      "round": 2,
+      "createdAt": "2026-06-18T16:49:52.330Z",
+      "updatedAt": "2026-06-18T16:49:52.331Z",
+      "finalApproved": true
+    },
+    {
+      "id": "d990a312-6200-4a45-af48-5e5419184041",
+      "phase": "architecture",
+      "category": "architecture",
+      "title": "architecture Decision",
+      "description": "Design the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Sec",
+      "proposal": "Design the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements",
+      "round": 1,
+      "createdAt": "2026-06-18T16:49:52.331Z",
+      "updatedAt": "2026-06-18T16:49:52.331Z",
+      "finalApproved": true
+    },
+    {
+      "id": "17a0150d-7145-44d5-9cc3-15ccd466b69e",
+      "phase": "implementation",
+      "category": "routine",
+      "title": "implementation Decision",
+      "description": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd rat",
+      "proposal": "Provide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements",
+      "round": 1,
+      "createdAt": "2026-06-18T16:49:52.331Z",
+      "updatedAt": "2026-06-18T16:49:52.331Z",
+      "finalApproved": true
+    },
+    {
+      "id": "dce85b50-a18d-4925-b5fe-dc73f1d2d51c",
+      "phase": "testing",
+      "category": "routine",
+      "title": "testing Decision",
+      "description": "Outline testing strategy and debug considerations for:\n\nProvide implementation details for:\n\nDesign ",
+      "proposal": "Outline testing strategy and debug considerations for:\n\nProvide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements\n\n[REVISED TO ADDRESS]: Performance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements\nSimplicity: Over-engineered for current requirements",
+      "round": 2,
+      "createdAt": "2026-06-18T16:49:52.331Z",
+      "updatedAt": "2026-06-18T16:49:52.331Z",
+      "finalApproved": true
+    }
+  ],
+  "completedRounds": 6,
+  "deadlocks": [],
+  "consensusResults": [
+    {
+      "decisionId": "decision-1781801392330",
+      "achieved": false,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392330",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.330Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392330",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.330Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392330",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.330Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392330",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.330Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-scalability-2"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.25,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801392331",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-performance-1"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801392331",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [],
+      "abstainedAgents": [],
+      "weightedScore": 1,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801392331",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [
+        "agent-security-0"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.75,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801392331",
+      "achieved": false,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "reject",
+          "reasoning": "Over-engineered for current requirements",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0"
+      ],
+      "rejectingAgents": [
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "abstainedAgents": [],
+      "weightedScore": 0.25,
+      "round": 1,
+      "finalProposal": ""
+    },
+    {
+      "decisionId": "decision-1781801392331",
+      "achieved": true,
+      "mode": "supermajority",
+      "votes": [
+        {
+          "agentId": "agent-security-0",
+          "agentName": "Security",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-performance-1",
+          "agentName": "Performance",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-scalability-2",
+          "agentName": "Scalability",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        },
+        {
+          "agentId": "agent-simplicity-3",
+          "agentName": "Simplicity",
+          "decisionId": "decision-1781801392331",
+          "round": 1,
+          "voteType": "approve",
+          "reasoning": "Approved",
+          "weight": 1,
+          "timestamp": "2026-06-18T16:49:52.331Z"
+        }
+      ],
+      "approvingAgents": [
+        "agent-security-0",
+        "agent-performance-1",
+        "agent-scalability-2",
+        "agent-simplicity-3"
+      ],
+      "rejectingAgents": [],
+      "abstainedAgents": [],
+      "weightedScore": 1,
+      "round": 1,
+      "finalProposal": ""
+    }
+  ],
+  "sessionLog": [
+    {
+      "timestamp": "2026-06-18T16:49:52.329Z",
+      "eventType": "SESSION_STARTED",
+      "data": {
+        "sessionId": "session-1781801392327",
+        "task": "Add rate limiting",
+        "agentCount": 4
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.329Z",
+      "eventType": "TASK_RECEIVED",
+      "data": {
+        "task": "Add rate limiting"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.329Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "planning"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.330Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.330Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "PROPOSAL_REVISED",
+      "data": {
+        "phase": "planning",
+        "round": 1,
+        "newProposal": "Plan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "planning",
+        "round": 2,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "planning",
+        "round": 2,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "architecture"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "architecture",
+        "round": 1,
+        "score": 1
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "implementation"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "Reasonable but could be optimized further."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "implementation",
+        "round": 1,
+        "score": 0.75
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "PHASE_STARTED",
+      "data": {
+        "phase": "testing"
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "testing",
+        "round": 1,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": false,
+        "opinion": "Concerns about complexity and maintainability here."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "PROPOSAL_REVISED",
+      "data": {
+        "phase": "testing",
+        "round": 1,
+        "newProposal": "Outline testing strategy and debug considerations for:\n\nProvide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: "
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ROUND_STARTED",
+      "data": {
+        "phase": "testing",
+        "round": 2,
+        "maxRounds": 15
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-security-0",
+        "agentName": "Security",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-performance-1",
+        "agentName": "Performance",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-scalability-2",
+        "agentName": "Scalability",
+        "agreed": true,
+        "opinion": "Works as specified with acceptable trade-offs."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "AGENT_RESPONSE",
+      "data": {
+        "agentId": "agent-simplicity-3",
+        "agentName": "Simplicity",
+        "agreed": true,
+        "opinion": "This approach looks solid overall. Good use of standard patterns."
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "CONSENSUS_ACHIEVED",
+      "data": {
+        "phase": "testing",
+        "round": 2,
+        "score": 1
+      }
+    },
+    {
+      "timestamp": "2026-06-18T16:49:52.331Z",
+      "eventType": "TASK_COMPLETED",
+      "data": {
+        "phases": 4,
+        "decisionsCount": 4
+      }
+    }
+  ],
+  "currentDecision": {
+    "id": "dce85b50-a18d-4925-b5fe-dc73f1d2d51c",
+    "phase": "testing",
+    "category": "routine",
+    "title": "testing Decision",
+    "description": "Outline testing strategy and debug considerations for:\n\nProvide implementation details for:\n\nDesign ",
+    "proposal": "Outline testing strategy and debug considerations for:\n\nProvide implementation details for:\n\nDesign the architecture for:\n\nPlan the following task:\n\nAdd rate limiting\n\n[REVISED TO ADDRESS]: Security: Over-engineered for current requirements\nPerformance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements\n\n[REVISED TO ADDRESS]: Performance: Over-engineered for current requirements\nScalability: Over-engineered for current requirements\nSimplicity: Over-engineered for current requirements",
+    "round": 2,
+    "createdAt": "2026-06-18T16:49:52.331Z",
+    "updatedAt": "2026-06-18T16:49:52.331Z",
+    "finalApproved": true
+  }
+}

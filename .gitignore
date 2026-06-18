@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+dist/
+/build
+
+# misc
+.DS_Store
+*.pem
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Council-specific
+.council/sessions/
+.council/logs/
+.council/cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
