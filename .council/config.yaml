@@ -1,0 +1,29 @@
+name: AI Council
+description: Multi-agent consensus for development decisions
+logLevel: info
+storage:
+  mode: file
+  path: .council/sessions
+context:
+  mode: summarized
+  maxHistoryRounds: 10
+memory:
+  mode: session
+credentials:
+  anthropicApiKey: test-key
+agents:
+  count: 4
+  viewpoints:
+    - security
+    - performance
+    - scalability
+    - simplicity
+  defaultLLM:
+    provider: anthropic
+    model: claude-sonnet
+    temperature: 0.7
+    maxTokens: 2000
+voting:
+  mode: supermajority
+  threshold: 0.75
+  maxRounds: 15

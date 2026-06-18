@@ -368,7 +368,7 @@ A: v0.1 is MVP quality. v1.0 will be production-ready with security audit.
 
 - 🐛 **Bug reports:** [GitHub Issues](https://github.com/yourusername/ai-council/issues)
 - 💡 **Feature ideas:** [GitHub Discussions](https://github.com/yourusername/ai-council/discussions)
-- 📧 **Email:** support@ai-council.dev (future)
+- 📧 **Email:** jaganmanyou@gmail.com
 - 💬 **Community:** Discord/Slack (coming soon)
 
 ---
