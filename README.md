@@ -202,26 +202,18 @@ See [VOTING_ENGINE.md](./docs/VOTING_ENGINE.md) for details.
 - [**ORCHESTRATOR_WORKFLOW.md**](./docs/ORCHESTRATOR_WORKFLOW.md) — How the engine works
 - [**VOTING_ENGINE.md**](./docs/VOTING_ENGINE.md) — Voting & consensus logic
 - [**ADAPTER_SDK.md**](./docs/ADAPTER_SDK.md) — Build custom adapters
-- [**MVP_ROADMAP.md**](./docs/MVP_ROADMAP.md) — v0.1 → v1.0 timeline
-- [**GITHUB_PROJECT_SPEC.md**](./docs/GITHUB_PROJECT_SPEC.md) — Repo structure
-
----
-
 ## Integrations
 
-### Available (v0.1+)
-- ✅ CLI (`council` command)
-- ✅ SDK (programmatic API)
+AI Council works with multiple platforms and tools:
 
-### Available (v0.1+)
-- ✅ CLI (`council` command)
-- ✅ SDK (`@ai-council/sdk` - programmatic API)
-- ✅ OpenCode (`@ai-council/adapter-opencode`)
-- ✅ Cursor (`@ai-council/adapter-cursor`)
-- ✅ Claude Code (`@ai-council/adapter-claude-code`)
-- ✅ GitHub Actions (`.github/workflows/council-review.yml`)
-- ✅ Slack notifications (`SlackNotifier` class)
-- ✅ Local LLM support (Ollama, LM Studio)
+- **CLI** — `council` command
+- **SDK** — `@ai-council/sdk` programmatic API
+- **OpenCode** — `@ai-council/adapter-opencode`
+- **Cursor** — `@ai-council/adapter-cursor`
+- **Claude Code** — `@ai-council/adapter-claude-code`
+- **GitHub Actions** — `.github/workflows/council-review.yml`
+- **Slack** — `SlackNotifier` class
+- **Local LLMs** — Ollama, LM Studio support
 
 ---
 
@@ -273,18 +265,6 @@ npm test
 # Create feature branch
 git checkout -b feature/my-feature
 ```
-
----
-
-## Roadmap
-
-| Version | Timeline | Focus |
-|---------|----------|-------|
-| **v0.1** | 4-6 weeks | Core engine, CLI, docs |
-| **v0.2** | 4-6 weeks | Adapters (OpenCode, Cursor, Claude Code) |
-| **v1.0** | 4-6 weeks | Production-ready, analytics, integrations |
-
-See [MVP_ROADMAP.md](./docs/MVP_ROADMAP.md) for detailed breakdown.
 
 ---
 
