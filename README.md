@@ -7,11 +7,11 @@
 AI Council lets you harness multiple AI agents with different perspectives to make better development decisions. Instead of a single AI response, you get:
 
 - **4+ agents** with different viewpoints (security, performance, scalability, etc.)
-- **3-phase deliberation**: Planning → Architecture → Implementation
+- **4-phase deliberation**: Planning → Architecture → Implementation → Testing & Debugging
 - **Democratic voting**: Simple majority, supermajority, unanimous, or mandatory approvals
 - **Real-time streaming**: Watch agents debate in your editor/tool
 - **Full consensus trails**: Replay and learn from past decisions
-- **Works everywhere**: OpenCode, Cursor, Claude Code, or standalone CLI
+- **Works everywhere**: OpenCode, Cursor, Claude Code, GitHub Actions, or standalone CLI
 
 ### Example
 
@@ -213,17 +213,15 @@ See [VOTING_ENGINE.md](./docs/VOTING_ENGINE.md) for details.
 - ✅ CLI (`council` command)
 - ✅ SDK (programmatic API)
 
-### Planned (v0.2)
-- 🚀 [OpenCode](./docs/OPENCODE_INTEGRATION.md)
-- 🚀 [Cursor](./docs/CURSOR_INTEGRATION.md)
-- 🚀 [Claude Code](./docs/CLAUDE_CODE_INTEGRATION.md)
-
-### Future (v1.0+)
-- GitHub Actions (PR review)
-- Slack notifications
-- Discord bot
-- VS Code extension
-- Local LLM support (Ollama, LM Studio)
+### Available (v0.1+)
+- ✅ CLI (`council` command)
+- ✅ SDK (`@ai-council/sdk` - programmatic API)
+- ✅ OpenCode (`@ai-council/adapter-opencode`)
+- ✅ Cursor (`@ai-council/adapter-cursor`)
+- ✅ Claude Code (`@ai-council/adapter-claude-code`)
+- ✅ GitHub Actions (`.github/workflows/council-review.yml`)
+- ✅ Slack notifications (`SlackNotifier` class)
+- ✅ Local LLM support (Ollama, LM Studio)
 
 ---
 
@@ -262,7 +260,7 @@ Look for issues tagged `good-first-issue` or `help-wanted`.
 
 ```bash
 # Clone
-git clone https://github.com/yourusername/ai-council.git
+git clone https://github.com/Jagganu/ai-council.git
 cd ai-council
 
 # Install & build

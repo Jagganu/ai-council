@@ -5,7 +5,11 @@
   "private": true,
   "workspaces": [
     "packages/core",
-    "packages/cli"
+    "packages/cli",
+    "packages/sdk",
+    "packages/adapter-opencode",
+    "packages/adapter-cursor",
+    "packages/adapter-claude-code"
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",

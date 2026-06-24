@@ -1,0 +1,19 @@
+{
+  "name": "@ai-council/adapter-cursor",
+  "version": "0.1.0",
+  "description": "Cursor extension for AI Council deliberation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@ai-council/sdk": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

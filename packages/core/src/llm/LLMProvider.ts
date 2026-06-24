@@ -12,10 +12,11 @@ export interface LLMResponse {
 }
 
 export interface LLMProviderConfig {
-  apiKey: string;
+  apiKey?: string;
   model: string;
   temperature?: number;
   maxTokens?: number;
+  baseUrl?: string;
 }
 
 export abstract class LLMProvider {
@@ -64,13 +65,16 @@ export class AnthropicProvider extends LLMProvider {
   }
 
   private async callAPI(body: any): Promise<any> {
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'anthropic-version': '2023-06-01',
+    };
+    if (this.config.apiKey) {
+      headers['x-api-key'] = this.config.apiKey;
+    }
     const response = await fetch(`${this.apiBaseUrl}/messages`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': this.config.apiKey,
-        'anthropic-version': '2023-06-01',
-      },
+      headers,
       body: JSON.stringify(body),
     });
 
@@ -141,8 +145,16 @@ export function createLLMProvider(
       return new AnthropicProvider(config);
     case 'openai':
       return new OpenAIProvider(config);
+    case 'ollama': {
+      const { LocalLLMProvider } = require('./LocalLLMProvider');
+      return new LocalLLMProvider(config);
+    }
+    case 'lmstudio':
+    case 'lm-studio': {
+      const { LMStudioProvider } = require('./LocalLLMProvider');
+      return new LMStudioProvider(config);
+    }
     case 'mock': {
-      // ponytail: lazy import to avoid circular dependency
       const { MockLLMProvider } = require('./MockLLMProvider');
       return new MockLLMProvider(config);
     }
