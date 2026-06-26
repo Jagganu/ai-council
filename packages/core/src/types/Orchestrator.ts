@@ -36,12 +36,24 @@ export interface OrchestratorWorkflow {
   finalizeSession(): Promise<OrchestratorState>;
 }
 
+/**
+ * Called as each agent's response streams in during a deliberation round.
+ * roundKey uniquely identifies phase+round so callers detect boundaries
+ * explicitly instead of guessing from timing gaps.
+ */
+export type AgentChunkCallback = (
+  agentId: string,
+  agentName: string,
+  chunk: string,
+  roundKey: string
+) => void;
+
 export interface Orchestrator extends OrchestratorWorkflow {
   config: OrchestratorConfig;
   state: OrchestratorState;
   initialize(config: OrchestratorConfig, sessionConfig: SessionConfig): Promise<void>;
-  processTask(task: string): Promise<OrchestratorState>;
+  processTask(task: string, onAgentChunk?: AgentChunkCallback): Promise<OrchestratorState>;
   getSessionLog(): OrchestratorLogEntry[];
-  exportSession(): Promise<string>; // JSON export
+  exportSession(): Promise<string>;
   getConsensusHistory(): ConsensusResult[];
 }

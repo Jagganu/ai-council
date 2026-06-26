@@ -12,10 +12,67 @@ import {
   ConfigLoader,
   OrchestratorConfig,
   SessionConfig,
+  AgentChunkCallback,
 } from '@ai-council/core';
 
 const args = process.argv.slice(2);
 const command = args[0] || 'help';
+
+/**
+ * Live streaming display: each agent gets a stable color, text is
+ * line-buffered, and round boundaries flush cleanly using the explicit
+ * roundKey from the callback (not guessed from timing).
+ */
+function createStreamDisplay() {
+  const colors = [chalk.cyan, chalk.magenta, chalk.yellow, chalk.green, chalk.blueBright, chalk.redBright];
+  const agents = new Map<string, {
+    name: string;
+    color: (s: string) => string;
+    buffer: string;
+    timer?: NodeJS.Timeout;
+    roundKey?: string;
+  }>();
+  let colorIdx = 0;
+
+  function flush(agentId: string) {
+    const agent = agents.get(agentId);
+    if (!agent) return;
+    for (const line of agent.buffer.split('\n')) {
+      if (line.trim().length > 0) {
+        process.stdout.write(`${agent.color(`[${agent.name}]`)} ${line}\n`);
+      }
+    }
+    agent.buffer = '';
+  }
+
+  const onChunk: AgentChunkCallback = (agentId, agentName, chunk, roundKey) => {
+    if (!agents.has(agentId)) {
+      agents.set(agentId, { name: agentName, color: colors[colorIdx++ % colors.length], buffer: '', roundKey });
+    }
+    const agent = agents.get(agentId)!;
+
+    // New round started: flush previous round's buffer first
+    if (agent.roundKey !== undefined && agent.roundKey !== roundKey) {
+      if (agent.timer) clearTimeout(agent.timer);
+      flush(agentId);
+      process.stdout.write('\n');
+    }
+    agent.roundKey = roundKey;
+    agent.buffer += chunk;
+
+    if (agent.timer) clearTimeout(agent.timer);
+    agent.timer = setTimeout(() => flush(agentId), 200);
+  };
+
+  const flushAll = () => {
+    for (const [agentId, agent] of agents) {
+      if (agent.timer) clearTimeout(agent.timer);
+      flush(agentId);
+    }
+  };
+
+  return { onChunk, flushAll };
+}
 
 async function main() {
   try {
@@ -67,8 +124,12 @@ async function handleReview() {
   console.log(chalk.cyan(`📋 Task: ${task}\n`));
   console.log(chalk.cyan(`🔧 Agents: ${config.agents.count}`));
   console.log(chalk.cyan(`🗳️  Voting: ${config.voting.mode}\n`));
+  console.log(chalk.gray('💬 Live deliberation:\n'));
 
-  const result = await orchestrator.processTask(task);
+  const { onChunk, flushAll } = createStreamDisplay();
+  const result = await orchestrator.processTask(task, onChunk);
+  flushAll();
+  console.log();
 
   // Display results
   displayResults(result);
@@ -99,8 +160,12 @@ async function handlePlan() {
   });
 
   console.log(chalk.cyan(`📋 Task: ${task}\n`));
+  console.log(chalk.gray('💬 Live deliberation:\n'));
 
-  const result = await orchestrator.processTask(task);
+  const { onChunk, flushAll } = createStreamDisplay();
+  const result = await orchestrator.processTask(task, onChunk);
+  flushAll();
+  console.log();
   displayResults(result);
 
   const storage = await orchestrator.getStorage();

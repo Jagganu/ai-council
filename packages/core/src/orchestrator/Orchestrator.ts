@@ -15,6 +15,7 @@ import {
   AgentConfig,
   AgentViewpoint,
   LLMProvider,
+  AgentChunkCallback,
 } from '../types';
 import { AgentManager } from '../agents/AgentManager';
 import { VotingEngine } from '../voting/VotingEngine';
@@ -54,7 +55,7 @@ export class Orchestrator {
     // Spawn agents
     this.agentManager = new AgentManager();
     const agentConfigs = this.createAgentConfigs(config.agents);
-    this.agentManager.spawnAgents(agentConfigs, config.agents.llmConfigs || []);
+    this.agentManager.spawnAgents(agentConfigs, config.agents.llmConfigs || [], config.credentials);
 
     this.logEvent('SESSION_STARTED', {
       sessionId: sessionConfig.sessionId,
@@ -63,62 +64,37 @@ export class Orchestrator {
     });
   }
 
-  /**
-   * Process a task through all phases
-   */
-  async processTask(task: string): Promise<OrchestratorState> {
+  async processTask(task: string, onAgentChunk?: AgentChunkCallback): Promise<OrchestratorState> {
     this.logEvent('TASK_RECEIVED', { task });
 
     // PHASE 1: Planning
-    await this.runPhase(
-      DecisionPhase.PLANNING,
-      `Plan the following task:\n\n${task}`,
-      DecisionCategory.ROUTINE
-    );
+    await this.runPhase(DecisionPhase.PLANNING, `Plan the following task:\n\n${task}`, DecisionCategory.ROUTINE, onAgentChunk);
 
     // PHASE 2: Architecture
     if (this.state.currentDecision && this.state.currentDecision.finalApproved) {
-      await this.runPhase(
-        DecisionPhase.ARCHITECTURE,
-        `Design the architecture for:\n\n${this.state.currentDecision.proposal}`,
-        DecisionCategory.ARCHITECTURE
-      );
+      await this.runPhase(DecisionPhase.ARCHITECTURE, `Design the architecture for:\n\n${this.state.currentDecision.proposal}`, DecisionCategory.ARCHITECTURE, onAgentChunk);
     }
 
     // PHASE 3: Implementation
     if (this.state.currentDecision && this.state.currentDecision.finalApproved) {
-      await this.runPhase(
-        DecisionPhase.IMPLEMENTATION,
-        `Provide implementation details for:\n\n${this.state.currentDecision.proposal}`,
-        DecisionCategory.ROUTINE
-      );
+      await this.runPhase(DecisionPhase.IMPLEMENTATION, `Provide implementation details for:\n\n${this.state.currentDecision.proposal}`, DecisionCategory.ROUTINE, onAgentChunk);
     }
 
     // PHASE 4: Testing & Debugging
     if (this.state.currentDecision && this.state.currentDecision.finalApproved) {
-      await this.runPhase(
-        DecisionPhase.TESTING,
-        `Outline testing strategy and debug considerations for:\n\n${this.state.currentDecision.proposal}`,
-        DecisionCategory.ROUTINE
-      );
+      await this.runPhase(DecisionPhase.TESTING, `Outline testing strategy and debug considerations for:\n\n${this.state.currentDecision.proposal}`, DecisionCategory.ROUTINE, onAgentChunk);
     }
 
-    this.logEvent('TASK_COMPLETED', {
-      phases: 4,
-      decisionsCount: this.state.decisions.length,
-    });
-
+    this.logEvent('TASK_COMPLETED', { phases: 4, decisionsCount: this.state.decisions.length });
     await this.storage.saveSession(this.state);
     return this.state;
   }
 
-  /**
-   * Run a single phase
-   */
   private async runPhase(
     phase: DecisionPhase,
     prompt: string,
-    category: DecisionCategory
+    category: DecisionCategory,
+    onAgentChunk?: AgentChunkCallback
   ): Promise<void> {
     this.state.currentPhase = phase;
     this.logEvent('PHASE_STARTED', { phase });
@@ -148,8 +124,13 @@ export class Orchestrator {
 
       this.logEvent('CONSENSUS_ROUND_STARTED', { phase, round, maxRounds });
 
-      // Get agent responses
-      const responses = await this.agentManager.invokeAll(decision.proposal);
+      // Get agent responses — wrap with roundKey so CLI can detect round boundaries
+      const roundKey = `${decision.id}:${round}`;
+      const wrappedChunk = onAgentChunk
+        ? (agentId: string, agentName: string, chunk: string) =>
+            onAgentChunk(agentId, agentName, chunk, roundKey)
+        : undefined;
+      const responses = await this.agentManager.invokeAll(decision.proposal, wrappedChunk);
 
       // Evaluate consensus
       const agentWeights: Record<string, number> = {};

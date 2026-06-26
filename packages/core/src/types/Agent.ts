@@ -56,6 +56,9 @@ export interface AgentResponse {
 
 export interface Agent {
   config: AgentConfig;
-  invoke(prompt: string): Promise<AgentResponse>;
+  invoke(prompt: string, onChunk?: OnAgentChunk): Promise<AgentResponse>;
   reset(): void;
 }
+
+/** Called with each raw text chunk as an agent's response streams in. */
+export type OnAgentChunk = (chunk: string) => void;

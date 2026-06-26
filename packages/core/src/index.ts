@@ -3,7 +3,7 @@
  */
 
 export * from './types';
-export { LLMProvider, createLLMProvider, AnthropicProvider, OpenAIProvider } from './llm/LLMProvider';
+export { LLMProvider, createLLMProvider, AnthropicProvider, OpenAIProvider, OpenRouterProvider, GoogleProvider, OnTokenCallback } from './llm/LLMProvider';
 export { Agent, AgentManager } from './agents/AgentManager';
 export { VotingEngine } from './voting/VotingEngine';
 export { Orchestrator } from './orchestrator/Orchestrator';

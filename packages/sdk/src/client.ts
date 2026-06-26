@@ -37,18 +37,7 @@ export class AICouncilSDK {
     this.orchestrator = new Orchestrator();
   }
 
-  async review(task: string): Promise<OrchestratorState> {
-    const sessionId = `sdk-${Date.now()}`;
-    await this.orchestrator.initialize(this.config, {
-      sessionId,
-      task,
-      startTime: new Date(),
-      orchestratorConfig: this.config,
-    });
-    return this.orchestrator.processTask(task);
-  }
-
-  async plan(task: string): Promise<OrchestratorState> {
+  async plan(task: string, onAgentChunk?: (agentId: string, agentName: string, chunk: string, roundKey: string) => void): Promise<OrchestratorState> {
     const sessionId = `sdk-plan-${Date.now()}`;
     await this.orchestrator.initialize(this.config, {
       sessionId,
@@ -57,8 +46,19 @@ export class AICouncilSDK {
       orchestratorConfig: this.config,
     });
 
-    const state = this.orchestrator.getState();
-    return state;
+    // BUG FIX: was calling getState() before processTask(), returning empty state
+    return this.orchestrator.processTask(task, onAgentChunk);
+  }
+
+  async review(task: string, onAgentChunk?: (agentId: string, agentName: string, chunk: string, roundKey: string) => void): Promise<OrchestratorState> {
+    const sessionId = `sdk-${Date.now()}`;
+    await this.orchestrator.initialize(this.config, {
+      sessionId,
+      task,
+      startTime: new Date(),
+      orchestratorConfig: this.config,
+    });
+    return this.orchestrator.processTask(task, onAgentChunk);
   }
 
   getSessionLog() {
